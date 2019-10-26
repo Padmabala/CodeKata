@@ -18,12 +18,14 @@ def alternateArray(arr,n):
     lIndex = 0
     rIndex = len(arr) - 1
     while 1:
-        print(arr[rIndex], end=' ')
+        print(arr[rIndex],end='')
         rIndex -= 1
         if (lIndex >= rIndex):
             break
-        print(arr[lIndex], end=' ')
+        print(' ',end='')
+        print(arr[lIndex], end='')
         lIndex += 1
+        print(' ', end='')
 
 
 
