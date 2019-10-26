@@ -18,12 +18,12 @@ def alternateArray(arr,n):
 n=int(input())
 arr=list(map(int,input().split()[:n]))
 alternateArray(arr,len(arr)-1)
-start=0
-end=len(arr)-1
+lIndex=0
+rIndex=len(arr)-1
 while 1:
-    print(arr[start])
-    start+=1
-    if (start >=end):
+    print(arr[lIndex],end=' ')
+    lIndex+=1
+    if (lIndex >=rIndex):
         break
-    print(arr[end])
-    end-=1
+    print(arr[rIndex],end=' ')
+    rIndex-=1
