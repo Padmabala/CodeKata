@@ -15,15 +15,22 @@ def partition(arr,low,high):
     return i+1
 def alternateArray(arr,n):
     sort(arr,0,n)
-n=int(input())
-arr=list(map(int,input().split()[:n]))
-alternateArray(arr,len(arr)-1)
-lIndex=0
-rIndex=len(arr)-1
-while 1:
-    print(arr[lIndex],end=' ')
-    lIndex+=1
-    if (lIndex >=rIndex):
-        break
-    print(arr[rIndex],end=' ')
-    rIndex-=1
+    lIndex = 0
+    rIndex = len(arr) - 1
+    while 1:
+        print(arr[rIndex], end=' ')
+        rIndex -= 1
+        if (lIndex >= rIndex):
+            break
+        print(arr[lIndex], end=' ')
+        lIndex += 1
+
+
+
+try:
+    n=int(input())
+    arr=list(map(int,input().split()[:n]))
+    alternateArray(arr,len(arr)-1)
+except:
+    print("Enter only number")
+
